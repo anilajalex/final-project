@@ -1,19 +1,46 @@
 $(document).ready(function(){
-	// var tempRequestWorldBankAPI = $.ajax({
-	// 	url: 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/', 
-	// 	type: 'GET', 
-	// 	data: {
-	// 			type: 'annualavg', 
-	// 			var: 'pr', 
-	// 			start: 2012, 
-	// 			end: 2013
-	// 	}
-	// }); 
-	// tempRequestWorldBankAPI.done(function(response){
-	// 	console.log(response); 
-	// }); 
 
+//CHART PORTION
 
+// Chart.defaults.global = {
+// } // ends chart.defaults
+
+// Chart.defaults.global.responsive = true;
+
+var ctx = document.getElementById("myChart").getContext("2d");
+
+var data = {
+	labels: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014'], 
+	datasets: [
+		{
+			label: "Sample", 
+			fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+      data: [42, 55, 63, 62, 55, 70, 64, 67, 55, 66, 73, 61, 64, 67, 75]
+		}, 
+		{
+			label: "Sample2", 
+			fillColor: "rgba(203,223,188,0.2)",
+      strokeColor: "rgba(156,184,135,1)",
+      pointColor: "rgba(120,154,95,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+      data: [55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55]
+		}
+	] // ends datasets
+
+}; // ends data 
+
+var options = {
+	scaleShowGridLines : false
+}
+
+var myLineChart = new Chart(ctx).Line(data, options); 
 
 // NOAA DATA REQUESTS
 
@@ -1348,7 +1375,7 @@ $(document).ready(function(){
 	var renderNOAAData = function(data) {
 		$("#results").empty(); 
 		var template = $("#noaa-template").html(); 
-		var output = Mustache.render(template, data); 
+		var output = Mustache.render(template, { min: data.results[11].value, max: data.results[13].value}); 
 		$("#results").html(output); 
 	}
 

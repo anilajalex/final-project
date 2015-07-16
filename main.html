@@ -10,15 +10,15 @@
 
 <h1>Final Project</h1>
 
-									
+
 
 <!-- 	<video id="welcomevid" controls="false" autoplay="true">
 		<source src="images/tree_growing.mp4" type="video/mp4" width="500" height="500">
 	</video> -->
 
-<!--  <input type="text" name="country" class="country">
- <input type="submit">
- -->
+<canvas id="myChart" width="400" height="400">
+
+</canvas>
 
 <div id="us-states">
 	<div class="img-container">
@@ -276,14 +276,13 @@
 
 <script id="noaa-template"type="x-tmpl-mustache">
 	<div>
-		{{#results}}
-			{{11}}
-				<p>The extreme minimum temperature reported in a month is {{value}} degrees Fahrenheit</p>
+			
+				<p>The extreme minimum temperature reported in a month is {{min}} degrees Fahrenheit</p>
 					
 			
-			{{13}}
-			<p>The extreme maximum temperature reported in a month is {{value}} degrees Fahrenheit</p>
-		{{/results}}
+			
+			<p>The extreme maximum temperature reported in a month is {{max}} degrees Fahrenheit</p>
+
 	</div>
 
 </script>
@@ -292,9 +291,9 @@
 <!-- <p class="attribution">Illustrations of U.S. states are from <a href="http://www.nuts4boltsdesign.com/#about">Nuts4BoltsDesign</a> via <a href="https://thenounproject.com/nuts4bolts/">The Noun Project</a>.</p> -->
 
 	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.0/mustache.js"></script>
-	<!-- <script src="https://cdnjs.com/libraries/chart.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+
 	<script src="http://www.amcharts.com/lib/3/ammap.js"></script>
 	<script src="http://www.amcharts.com/lib/3/maps/js/continentsLow.js"></script>
 	<script src="http://www.amcharts.com/lib/3/themes/none.js"></script>
