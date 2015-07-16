@@ -1,0 +1,38 @@
+html, body {
+	height: 100%;
+	position: relative;
+}
+
+/*INTRO*/
+
+#welcomevid {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	
+}
+
+										
+
+/*50 STATES*/
+
+h3 {
+	margin-left: 2em;
+}
+
+img {
+	height: 10em;
+	width: 10em;
+	margin: 1em;
+	display: inline;
+}
+
+.img-container {
+	float:left;
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0;
+}
