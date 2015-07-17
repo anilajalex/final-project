@@ -1,46 +1,69 @@
 $(document).ready(function(){
 
-//CHART PORTION
+//WORLD MAP
 
-// Chart.defaults.global = {
-// } // ends chart.defaults
+$('.canada').on('click', function(){
+	console.log("clicked!")
 
-// Chart.defaults.global.responsive = true;
+}); //ends onclick
 
-var ctx = document.getElementById("myChart").getContext("2d");
+//CHARTS PORTION
+
+//Mean project temperature for U.S. from 2080 to 2099 in C CHART
+
+var ctx = document.getElementById("usa-future").getContext("2d");
 
 var data = {
-	labels: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014'], 
+	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
 	datasets: [
 		{
-			label: "Sample", 
+			label: "CO2 emissions", 
 			fillColor: "rgba(220,220,220,0.2)",
-      strokeColor: "rgba(220,220,220,1)",
-      pointColor: "rgba(220,220,220,1)",
-      pointStrokeColor: "#fff",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(220,220,220,1)",
-      data: [42, 55, 63, 62, 55, 70, 64, 67, 55, 66, 73, 61, 64, 67, 75]
-		}, 
-		{
-			label: "Sample2", 
-			fillColor: "rgba(203,223,188,0.2)",
-      strokeColor: "rgba(156,184,135,1)",
-      pointColor: "rgba(120,154,95,1)",
-      pointStrokeColor: "#fff",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(220,220,220,1)",
-      data: [55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55]
+	    strokeColor: "rgba(220,220,220,1)",
+	    pointColor: "rgba(220,220,220,1)",
+	    pointStrokeColor: "#fff",
+	    pointHighlightFill: "#fff",
+	    pointHighlightStroke: "rgba(220,220,220,1)",
+	    data: ['-3.89', '-2.86', 1.13, 7.04, 12.78, 18.14, 21.01, 20.07, 15.81, 9.41, 2.45, '-1.94' ]
 		}
-	] // ends datasets
+	]// ends datasets 
 
-}; // ends data 
+} // ends data
 
 var options = {
 	scaleShowGridLines : false
 }
 
-var myLineChart = new Chart(ctx).Line(data, options); 
+var secondLineChart = new Chart(ctx).Line(data, options); 
+
+//Top 10 global emissions CHART
+
+var data = [
+	{
+		value: 27, 
+		color:"#F7464A",
+    highlight: "#FF5A5E",
+    label: "Top 10 countries"
+	}, 
+	{
+		value: 73, 
+		color: "#46BFBD",
+    highlight: "#5AD3D1",
+    label: "Others"
+	}
+] // data
+
+var options = {
+	percentageInnerCutout : 50,
+	animationSteps : 100,
+	animationEasing : "easeOutBounce",
+	animateRotate : true,
+	animateScale : false,
+}
+
+ctx = $("#greenhouse-gas").get(0).getContext("2d"); 
+var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
+
 
 // NOAA DATA REQUESTS
 
@@ -51,9 +74,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:02',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -77,9 +98,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:01',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -103,9 +122,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:05',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -129,9 +146,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:04',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -155,9 +170,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:06',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -181,9 +194,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:08',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -207,9 +218,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:09',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -233,9 +242,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:11',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -259,9 +266,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:10',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -285,9 +290,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:12',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -311,9 +314,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:13',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -337,9 +338,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:15',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -363,9 +362,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:19',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -389,9 +386,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:16',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -415,9 +410,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:17',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -441,9 +434,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:18',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -467,9 +458,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:20',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -493,9 +482,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:21',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -519,9 +506,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:22',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -545,9 +530,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:25',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -571,9 +554,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:24',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -597,9 +578,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:23',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -623,9 +602,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:26',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -649,9 +626,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:27',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -675,9 +650,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:29',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -701,9 +674,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:28',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -727,9 +698,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:30',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -753,9 +722,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:37',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -779,9 +746,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:38',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -805,9 +770,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:31',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -831,9 +794,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:33',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -857,9 +818,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:34',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -883,9 +842,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:35',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -909,9 +866,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:32',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -935,9 +890,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:36',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -961,9 +914,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:39',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -987,9 +938,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:40',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1013,9 +962,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:41',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1039,9 +986,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:42',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1065,9 +1010,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:44',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1091,9 +1034,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:45',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1117,9 +1058,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:46',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1143,9 +1082,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:47',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1169,9 +1106,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:48',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1195,9 +1130,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:49',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1221,9 +1154,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:51',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1247,9 +1178,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:50',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1273,9 +1202,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:53',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1299,9 +1226,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:55',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1325,9 +1250,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:54',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 
@@ -1351,9 +1274,7 @@ var myLineChart = new Chart(ctx).Line(data, options);
 			url: 'http://www.ncdc.noaa.gov/cdo-web/api/v2/data', 
 			type: 'GET',
 			data: { 
-				datasetid: 'ANNUAL',
-				// datatypeid: 'ALL', 
-				// datatypeid: 'MNTM', 
+				datasetid: 'ANNUAL',  
 				locationid: 'FIPS:56',   
 				startdate: '2009-01-01', 
 				enddate: '2010-01-01', 

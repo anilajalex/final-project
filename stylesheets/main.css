@@ -13,8 +13,20 @@ html, body {
 	
 }
 
-										
+/*WORLD MAP*/
+#world-map {
+	height: 70em;
+	width: 70em;
+}
 
+
+/*CHARTS*/									
+
+#nasa-gif {
+	height: 25em;
+	width: 30em; 
+	display: block;
+}
 /*50 STATES*/
 
 h3 {

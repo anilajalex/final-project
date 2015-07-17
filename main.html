@@ -8,16 +8,20 @@
 </head>
 <body>
 
-<h1>Final Project</h1>
+<!-- <iframe width="500" height="500" src="http://climate.nasa.gov/embed/28" frameborder="0" allowfullscreen seamless></iframe> -->
 
-
-
-<!-- 	<video id="welcomevid" controls="false" autoplay="true">
+<!-- 	<video id="welcomevid" controls="false" autoplay loop seamless>
 		<source src="images/tree_growing.mp4" type="video/mp4" width="500" height="500">
 	</video> -->
 
-<canvas id="myChart" width="400" height="400">
+<img id="world-map" src="images/worldHigh.svg">
 
+<h3>Global Top 10 Greenhouse Gas Emitters</h3>
+<canvas id="greenhouse-gas" width="150" height="150">
+</canvas>
+
+<h3>Mean project temperature for U.S. from 2080 to 2099 in C</h3>
+<canvas id="usa-future" width="400" height="400">
 </canvas>
 
 <div id="us-states">
@@ -288,7 +292,12 @@
 </script>
 
 
-<!-- <p class="attribution">Illustrations of U.S. states are from <a href="http://www.nuts4boltsdesign.com/#about">Nuts4BoltsDesign</a> via <a href="https://thenounproject.com/nuts4bolts/">The Noun Project</a>.</p> -->
+<!-- 
+Works Cited: 
+<p class="attribution">Illustrations of U.S. states are from <a href="http://www.nuts4boltsdesign.com/#about">Nuts4BoltsDesign</a> via <a href="https://thenounproject.com/nuts4bolts/">The Noun Project</a>.</p> 
+<a href="http://climate.nasa.gov/climate_resources/115/">NASA Climate Resources</a>
+<a href="http://www.pewglobal.org/2015/07/14/climate-change-seen-as-top-global-threat/">Pew Research Center</a>
+-->
 
 	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.0/mustache.js"></script>
