@@ -8,13 +8,13 @@
 </head>
 <body>
 
-<!-- <iframe width="500" height="500" src="http://climate.nasa.gov/embed/28" frameborder="0" allowfullscreen seamless></iframe> -->
 
 <!-- 	<video id="welcomevid" controls="false" autoplay loop seamless>
 		<source src="images/tree_growing.mp4" type="video/mp4" width="500" height="500">
 	</video> -->
 
-<img id="world-map" src="images/worldHigh.svg">
+<!-- <img id="world-map" src="images/worldHigh.svg"> -->
+<object id="world-map" data="./images/worldHigh.svg" type="image/svg+xml"></object>
 
 <h3>Global Top 10 Greenhouse Gas Emitters</h3>
 <canvas id="greenhouse-gas" width="150" height="150">
@@ -291,13 +291,14 @@
 
 </script>
 
+<!-- <footer>
 
-<!-- 
 Works Cited: 
 <p class="attribution">Illustrations of U.S. states are from <a href="http://www.nuts4boltsdesign.com/#about">Nuts4BoltsDesign</a> via <a href="https://thenounproject.com/nuts4bolts/">The Noun Project</a>.</p> 
 <a href="http://climate.nasa.gov/climate_resources/115/">NASA Climate Resources</a>
 <a href="http://www.pewglobal.org/2015/07/14/climate-change-seen-as-top-global-threat/">Pew Research Center</a>
--->
+
+</footer> -->
 
 	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.0/mustache.js"></script>
@@ -306,6 +307,8 @@ Works Cited:
 	<script src="http://www.amcharts.com/lib/3/ammap.js"></script>
 	<script src="http://www.amcharts.com/lib/3/maps/js/continentsLow.js"></script>
 	<script src="http://www.amcharts.com/lib/3/themes/none.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.0.5/svg.min.js"></script>
 
 
 	<script type="text/javascript" src="js/main.js"></script>

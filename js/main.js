@@ -2,10 +2,21 @@ $(document).ready(function(){
 
 //WORLD MAP
 
-$('.canada').on('click', function(){
-	console.log("clicked!")
+//CANADA
 
-}); //ends onclick
+$("#world-map").contents().find("#CA").click( function(e){ 
+	var tempRequestWorldBankAPI = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: { 
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	tempRequestWorldBankAPI.done(function(response){
+		console.log(response); 
+	}); 
+}); 
 
 //CHARTS PORTION
 

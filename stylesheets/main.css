@@ -13,6 +13,12 @@ html, body {
 	
 }
 
+footer {
+	position: absolute;
+	bottom: 0;
+	
+}
+
 /*WORLD MAP*/
 #world-map {
 	height: 70em;
