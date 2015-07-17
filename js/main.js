@@ -5,18 +5,29 @@ $(document).ready(function(){
 //CANADA
 
 $("#world-map").contents().find("#CA").click( function(e){ 
-	var tempRequestWorldBankAPI = $.ajax({
+	var requestCanada = $.ajax({
 		url: 'http://api.worldbank.org/countries', 
 		type: 'GET', 
-		data: { 
+		data: {  
 			per_page: 300,  
 			format: 'JSON'
 		}
 	}); 
-	tempRequestWorldBankAPI.done(function(response){
+	requestCanada.done(function(response){
+		// renderCanada(response); 
 		console.log(response); 
 	}); 
 }); 
+
+// var renderCanada = function(data) {
+// 	$("#canada-data").empty(); 
+// 	var template = $("world-map-template").html(); 
+// 	var output = Mustache.render(template, {income: data.1[36]}); 
+// 	$("#canada-data").html(output); 
+// } // ends render
+
+
+
 
 //CHARTS PORTION
 
