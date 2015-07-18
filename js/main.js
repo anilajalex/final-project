@@ -14,20 +14,229 @@ $("#world-map").contents().find("#CA").click( function(e){
 		}
 	}); 
 	requestCanada.done(function(response){
-		// renderCanada(response); 
+		renderCanada(response);  
 		console.log(response); 
 	}); 
 }); 
 
-// var renderCanada = function(data) {
-// 	$("#canada-data").empty(); 
-// 	var template = $("world-map-template").html(); 
-// 	var output = Mustache.render(template, {income: data.1[36]}); 
-// 	$("#canada-data").html(output); 
-// } // ends render
+var renderCanada = function(data) {
+	$("#canada-data").empty(); 
+	var template = $("#world-map-template").html(); 
+	var output = Mustache.render(template, {income: data[1][36].incomeLevel.value}); 
+	$("#canada-data").html(output); 
+} // ends render
 
+//USA
 
+$("#world-map").contents().find("#US").click( function(e){ 
+	var requestUS = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: {  
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	requestUS.done(function(response){
+		renderUS(response);  
+		console.log(response); 
+	}); 
+}); 
 
+var renderUS = function(data) {
+	$("#us-data").empty(); 
+	var template = $("#world-map-template2").html(); 
+	var output = Mustache.render(template, {income: data[1][250].incomeLevel.value}); 
+	$("#us-data").html(output); 
+} // ends render
+
+//BRAZIL
+$("#world-map").contents().find("#BR").click( function(e){ 
+	var requestBR = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: {  
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	requestBR.done(function(response){
+		renderBR(response);  
+		console.log(response); 
+	}); 
+}); 
+
+var renderBR = function(data) {
+	$("#br-data").empty(); 
+	var template = $("#world-map-template3").html(); 
+	var output = Mustache.render(template, {income: data[1][29].incomeLevel.value}); 
+	$("#br-data").html(output); 
+} // ends render
+
+//GREAT BRITAIN
+$("#world-map").contents().find("#GB").click( function(e){ 
+	var requestGB = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: {  
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	requestGB.done(function(response){
+		renderGB(response);  
+		console.log(response); 
+	}); 
+}); 
+
+var renderGB = function(data) {
+	$("#gb-data").empty(); 
+	var template = $("#world-map-template4").html(); 
+	var output = Mustache.render(template, {income: data[1][29].incomeLevel.value}); 
+	$("#gb-data").html(output); 
+} // ends render
+
+//Russia
+$("#world-map").contents().find("#RU").click( function(e){ 
+	var requestRU = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: {  
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	requestRU.done(function(response){
+		renderRU(response);  
+		console.log(response); 
+	}); 
+}); 
+
+var renderRU = function(data) {
+	$("#ru-data").empty(); 
+	var template = $("#world-map-template5").html(); 
+	var output = Mustache.render(template, {income: data[1][204].incomeLevel.value}); 
+	$("#ru-data").html(output); 
+} // ends render
+
+//China
+$("#world-map").contents().find("#CN").click( function(e){ 
+	var requestCN = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: {  
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	requestCN.done(function(response){
+		renderCN(response);  
+		console.log(response); 
+	}); 
+}); 
+
+var renderCN = function(data) {
+	$("#cn-data").empty(); 
+	var template = $("#world-map-template6").html(); 
+	var output = Mustache.render(template, {income: data[1][204].incomeLevel.value}); 
+	$("#cn-data").html(output); 
+} // ends render
+
+//India
+
+$("#world-map").contents().find("#IN").click( function(e){ 
+	var requestIN = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: {  
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	requestIN.done(function(response){
+		renderIN(response);  
+		console.log(response); 
+	}); 
+}); 
+
+var renderIN = function(data) {
+	$("#in-data").empty(); 
+	var template = $("#world-map-template7").html(); 
+	var output = Mustache.render(template, {income: data[1][108].incomeLevel.value}); 
+	$("#in-data").html(output); 
+} // ends render
+
+//Indonesia
+
+$("#world-map").contents().find("#ID").click( function(e){ 
+	var requestID = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: {  
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	requestID.done(function(response){
+		renderID(response);  
+		console.log(response); 
+	}); 
+}); 
+
+var renderID = function(data) {
+	$("#id-data").empty(); 
+	var template = $("#world-map-template8").html(); 
+	var output = Mustache.render(template, {income: data[1][106].incomeLevel.value}); 
+	$("#id-data").html(output); 
+} // ends render
+
+//IRAN
+
+$("#world-map").contents().find("#IR").click( function(e){ 
+	var requestIR = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: {  
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	requestIR.done(function(response){
+		renderIR(response);  
+		console.log(response); 
+	}); 
+}); 
+
+var renderIR = function(data) {
+	$("#ir-data").empty(); 
+	var template = $("#world-map-template9").html(); 
+	var output = Mustache.render(template, {income: data[1][111].incomeLevel.value}); 
+	$("#ir-data").html(output); 
+} // ends render
+
+//South Africa
+
+$("#world-map").contents().find("#ZA").click( function(e){ 
+	var requestZA = $.ajax({
+		url: 'http://api.worldbank.org/countries', 
+		type: 'GET', 
+		data: {  
+			per_page: 300,  
+			format: 'JSON'
+		}
+	}); 
+	requestZA.done(function(response){
+		renderZA(response);  
+		console.log(response); 
+	}); 
+}); 
+
+var renderZA = function(data) {
+	$("#za-data").empty(); 
+	var template = $("#world-map-template10").html(); 
+	var output = Mustache.render(template, {income: data[1][111].incomeLevel.value}); 
+	$("#za-data").html(output); 
+} // ends render
 
 //CHARTS PORTION
 

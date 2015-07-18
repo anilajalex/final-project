@@ -1,5 +1,9 @@
 WORLD BANK API query
 
+// <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+
 	how to access ids in SVG: 
 $("#world-map").contents().find("#CA").click( function(e){ 
 	console.log("canadia clicked!") 

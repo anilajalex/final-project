@@ -16,14 +16,14 @@ html, body {
 footer {
 	position: absolute;
 	bottom: 0;
-	
+
 }
 
 /*WORLD MAP*/
-#world-map {
-	height: 70em;
-	width: 70em;
-}
+/*#world-map {
+	height: 60em;
+	width: 60em;
+}*/
 
 
 /*CHARTS*/									
