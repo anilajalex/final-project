@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	NOAA_TOKEN = ENV['NOAA_TOKEN']
+	NOAA_TOKEN = ENV['NOAA_TOKEN']; 
 
 //WORLD MAP
 

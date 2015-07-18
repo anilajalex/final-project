@@ -1,0 +1,56 @@
+html, body {
+	height: 100%;
+	position: relative;
+}
+
+/*INTRO*/
+
+#welcomevid {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+
+}
+
+/*WORLD MAP*/
+/*#world-map {
+	height: 60em;
+	width: 60em;
+}*/
+
+
+/*CHARTS*/									
+
+#nasa-gif {
+	height: 25em;
+	width: 30em; 
+	display: block;
+}
+/*50 STATES*/
+
+h3 {
+	margin-left: 2em;
+}
+
+img {
+	height: 10em;
+	width: 10em;
+	margin: 1em;
+	display: inline;
+}
+
+.img-container {
+	float:left;
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0;
+}
