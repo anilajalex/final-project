@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 //STYLE ELEMENTS
 
-
 $('#scroll-button').mouseover(function(){
 	$('#scroll-button').animate({
 		'marginLeft' : "+=30px"
@@ -12,12 +11,11 @@ $('#scroll-button').mouseover(function(){
 }); 
 
 
-$(window).hide(); 
+$(".video-text").hide(); 
+$(".video-text").show(); 
 $('#vid-text1').slideUp( 600 ).delay( 1200 ).fadeIn( 500 );
 $('#vid-text2').slideUp( 900 ).delay( 1500 ).fadeIn( 800 );
 $('#vid-text3').slideUp( 1200 ).delay( 1800 ).fadeIn( 1200 ); 
-
-
 
 
 //WORLD MAP
@@ -260,7 +258,7 @@ var renderZA = function(data) {
 
 //CHARTS PORTION
 
-//Mean project temperature for U.S. from 2080 to 2099 in C CHART
+//Differences in temperature from 20
 
 var data = {
 	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
@@ -293,13 +291,13 @@ var data = [
 		value: 27, 
 		color:"#F7464A",
     highlight: "#FF5A5E",
-    label: "Top 10 countries"
+    label: "Others"
 	}, 
 	{
 		value: 73, 
 		color: "#46BFBD",
     highlight: "#5AD3D1",
-    label: "Others"
+    label: "Top 10 countries"
 	}
 ] // data
 
@@ -331,7 +329,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" // put this in an environment variable 
 			}
 		}); 
 		requestNOAA.done(
