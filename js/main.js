@@ -1,6 +1,24 @@
+NOAA_TOKEN = ['NOAA_TOKEN']; 
+
 $(document).ready(function(){
 
-	NOAA_TOKEN = ENV['NOAA_TOKEN']; 
+//STYLE ELEMENTS
+
+
+$('#scroll-button').mouseover(function(){
+	$('#scroll-button').animate({
+		'marginLeft' : "+=30px"
+	});
+}); 
+
+
+$(window).hide(); 
+$('#vid-text1').slideUp( 600 ).delay( 1200 ).fadeIn( 500 );
+$('#vid-text2').slideUp( 900 ).delay( 1500 ).fadeIn( 800 );
+$('#vid-text3').slideUp( 1200 ).delay( 1800 ).fadeIn( 1200 ); 
+
+
+
 
 //WORLD MAP
 
@@ -244,8 +262,6 @@ var renderZA = function(data) {
 
 //Mean project temperature for U.S. from 2080 to 2099 in C CHART
 
-var ctx = document.getElementById("usa-future").getContext("2d");
-
 var data = {
 	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
 	datasets: [
@@ -267,6 +283,7 @@ var options = {
 	scaleShowGridLines : false
 }
 
+var ctx = document.getElementById("usa-future").getContext("2d");
 var secondLineChart = new Chart(ctx).Line(data, options); 
 
 //Top 10 global emissions CHART

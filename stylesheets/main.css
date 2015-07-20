@@ -3,51 +3,217 @@ html, body {
 	position: relative;
 }
 
+body {
+	background-color: #3e4f44; 
+}
+
 /*INTRO*/
+
+video {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
 
 #welcomevid {
 	position: relative;
 	width: 100%;
 	height: auto;
-	margin: 0 auto;
-	
+	padding: 0;
+
 }
+
+.video-text {
+	position: absolute;
+	top: 40%;
+	transform: translateY(-50%);
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	color: white;
+	text-shadow: 0 0 30px #000;
+	font-size: 40px;
+}
+
+.video-text h1 {
+	font-size: 1.3em;
+}
+
+.video-text span {
+	color: #33C3F0;
+}
+
+#scroll-button {
+	transform: rotate(90deg);
+	display: inline-block;
+	text-decoration: none;
+	transition: all 0.7s;
+	color: #fff;
+	height: 5px; 
+	width: 5px; 
+}
+
+#scroll-button:hover {
+	text-shadow: 0 0 20px rgba(89, 116, 99, 0.9);
+	color: #85a18f;
+}
+
+
+/*#container {
+	margin-left: 10em; 
+	margin-right: 10em; 
+}*/
 
 footer {
 	position: absolute;
 	bottom: 0;
+	left: 0; 
+	width: 100%;
+/*	height: 3.4em;
+	margin-top: 1em;*/
+	background-color: #eee; 
+
 
 }
 
 /*WORLD MAP*/
-/*#world-map {
-	height: 60em;
-	width: 60em;
-}*/
 
+#world-map-text {
+	margin: 6em; 
+	text-align: center; 
+}
+
+#world-map-div {
+	background-color: #00B8E6; 
+	/*background-image: url("http://www.netanimations.net/water_waves_ocean_ripple_high_quality_animated_gif.gif"); 
+	background-size: cover;*/
+	/*margin: 1em;*/
+	text-align: center; 
+	width: 100%;
+	height: auto;
+}
+
+#world-map {
+	margin: 2em;
+}
+
+/*modal*/
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(143,27,15,0.8);
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
 
 /*CHARTS*/									
 
-#nasa-gif {
+/*#nasa-gif {
 	height: 25em;
 	width: 30em; 
 	display: block;
+}*/
+
+.graphtext {
+	background-color: #85a18f; 
+	padding: 50px; 
+	text-align: center; 
 }
+
+p {
+	color: #fff;
+}
+
+canvas {
+	width: 20em;
+	height: 20em;
+	margin: 1em; 
+	z-index: 1; 
+}
+
+
+#graphs {
+	margin-right: 10em;
+	margin-left: 10em;
+}
+
+
+#greenhouse-gas-text {
+	width: 20em;
+	height: 20em;
+	float: left;
+	margin: 1em; 
+}
+
+#usa-future-text {
+	width: 20em;
+	height: 20em;
+	float: right;
+	margin: 1em; 
+}
+
+
 /*50 STATES*/
 
-h3 {
-	margin-left: 2em;
+#us-states-text {
+	text-align: center; 
+	padding: 5em;
+}
+
+#us-states {
+	background-color: #85a18f; 
+	height: auto;
+	width: 100%;
+}
+
+.text {
+	color: #fff;
+}
+
+h1 {
+	color: #fff;
 }
 
 img {
-	height: 10em;
-	width: 10em;
-	margin: 1em;
-	display: inline;
+	height: 5em;
+	width: 5em;
+	margin: 3em;
 }
 
 .img-container {
 	float:left;
+	/*background-color: #fff; 
+	margin: 1em;*/
+	background-color: #85a18f; 
+	text-align: center; 
 }
 
 .attribution {
