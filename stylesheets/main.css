@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
 html, body {
 	height: 100%;
 	position: relative;
@@ -33,6 +35,7 @@ video {
 	color: white;
 	text-shadow: 0 0 30px #000;
 	font-size: 40px;
+	font-family: 'Raleway'; 
 }
 
 .video-text h1 {
@@ -81,24 +84,23 @@ footer {
 #world-map-text {
 	margin: 6em; 
 	text-align: center; 
+	font-family: 'Raleway';
 }
 
 #world-map-div {
 	background-color: #00B8E6; 
-	/*background-image: url("http://www.netanimations.net/water_waves_ocean_ripple_high_quality_animated_gif.gif"); 
+/*	background-image: url("http://www.netanimations.net/water_waves_ocean_ripple_high_quality_animated_gif.gif"); 
 	background-size: cover;*/
-	/*margin: 1em;*/
+	margin: 1em; 
 	text-align: center; 
-	width: 100%;
-	height: auto;
 }
 
 #world-map {
 	margin: 2em;
 }
 
-/*modal*/
-.md-modal {
+/*modal
+/*.md-modal {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -133,19 +135,15 @@ footer {
 	opacity: 1;
 	visibility: visible;
 }
-
+*/
 /*CHARTS*/									
 
-/*#nasa-gif {
-	height: 25em;
-	width: 30em; 
-	display: block;
-}*/
 
 .graphtext {
 	background-color: #85a18f; 
 	padding: 50px; 
 	text-align: center; 
+	font-family: 'Raleway';
 }
 
 p {
@@ -171,6 +169,7 @@ canvas {
 	height: 20em;
 	float: left;
 	margin: 1em; 
+	font-family: 'Raleway';
 }
 
 #co2-emissions-text {
@@ -178,6 +177,7 @@ canvas {
 	height: 20em;
 	float: right;
 	margin: 1em; 
+	font-family: 'Raleway';
 }
 
 
@@ -186,6 +186,7 @@ canvas {
 #us-states-text {
 	text-align: center; 
 	padding: 5em;
+	font-family: 'Raleway';
 }
 
 #us-states {
@@ -196,6 +197,7 @@ canvas {
 
 .text {
 	color: #fff;
+	font-family: 'Raleway';
 }
 
 h1 {
