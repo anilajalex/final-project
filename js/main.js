@@ -260,31 +260,59 @@ var renderZA = function(data) {
 
 //CHARTS PORTION
 
-//Mean project temperature for U.S. from 2080 to 2099 in C CHART
+//CO2 emissions (metric tons per capita) CHART
+
+var ctx = document.getElementById("co2-emissions").getContext("2d");
 
 var data = {
-	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
+	labels: ['2005', '2006', '2007', '2008', '2009', '2010', '2011'], 
 	datasets: [
 		{
 			label: "CO2 emissions", 
 			fillColor: "rgba(220,220,220,0.2)",
-	    strokeColor: "rgba(220,220,220,1)",
-	    pointColor: "rgba(220,220,220,1)",
-	    pointStrokeColor: "#fff",
-	    pointHighlightFill: "#fff",
-	    pointHighlightStroke: "rgba(220,220,220,1)",
-	    data: ['-3.89', '-2.86', 1.13, 7.04, 12.78, 18.14, 21.01, 20.07, 15.81, 9.41, 2.45, '-1.94' ]
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+      data: [4.6, 4.7, 4.7, 4.8, 4.7, 4.9, 5.0]
 		}
-	]// ends datasets 
+	] // ends datasets
 
-} // ends data
+}; // ends data 
 
 var options = {
 	scaleShowGridLines : false
 }
 
-var ctx = document.getElementById("usa-future").getContext("2d");
-var secondLineChart = new Chart(ctx).Line(data, options); 
+var myLineChart = new Chart(ctx).Line(data, options); 
+
+
+// //Mean project temperature for U.S. from 2080 to 2099 in C CHART
+
+// var data = {
+// 	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
+// 	datasets: [
+// 		{
+// 			label: "CO2 emissions", 
+// 			fillColor: "rgba(220,220,220,0.2)",
+// 	    strokeColor: "rgba(220,220,220,1)",
+// 	    pointColor: "rgba(220,220,220,1)",
+// 	    pointStrokeColor: "#fff",
+// 	    pointHighlightFill: "#fff",
+// 	    pointHighlightStroke: "rgba(220,220,220,1)",
+// 	    data: ['-3.89', '-2.86', 1.13, 7.04, 12.78, 18.14, 21.01, 20.07, 15.81, 9.41, 2.45, '-1.94' ]
+// 		}
+// 	]// ends datasets 
+
+// } // ends data
+
+// var options = {
+// 	scaleShowGridLines : false
+// }
+
+// var ctx = document.getElementById("usa-future").getContext("2d");
+// var secondLineChart = new Chart(ctx).Line(data, options); 
 
 //Top 10 global emissions CHART
 
