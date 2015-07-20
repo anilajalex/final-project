@@ -153,6 +153,8 @@ canvas {
 
 #us-states {
 	background-color: #85a18f; 
+	height: auto;
+	width: 100%;
 }
 
 .text {
@@ -166,7 +168,7 @@ h1 {
 img {
 	height: 5em;
 	width: 5em;
-	margin: 1em;
+	margin: 3em;
 }
 
 .img-container {
@@ -175,7 +177,6 @@ img {
 	margin: 1em;*/
 	background-color: #85a18f; 
 	text-align: center; 
-	width: 100%;
 }
 
 .attribution {
