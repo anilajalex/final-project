@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-	background-color: black; 
+	background-color: #3e4f44; 
 }
 
 /*INTRO*/
@@ -58,15 +58,11 @@ video {
 	color: #85a18f;
 }
 
-.graphtext {
-	padding: 50px; 
-	text-align: center; 
-}
 
-#container {
+/*#container {
 	margin-left: 10em; 
 	margin-right: 10em; 
-}
+}*/
 
 footer {
 	position: absolute;
@@ -81,26 +77,38 @@ footer {
 }
 
 /*WORLD MAP*/
-#world-map {
-	margin: 1em;
-	width: 50%;
-	height: 15%;
 
+#world-map-text {
+	margin: 6em; 
+	text-align: center; 
 }
 
 #world-map-div {
 	background-color: #00B8E6; 
-	margin: 1em;
-	border-radius: 150px; 
+	/*background-image: url("http://www.netanimations.net/water_waves_ocean_ripple_high_quality_animated_gif.gif"); 
+	background-size: cover;*/
+	/*margin: 1em;*/
+	text-align: center; 
+	width: 100%;
+	height: auto;
 }
 
+#world-map {
+	margin: 2em;
+}
 
 /*CHARTS*/									
 
-#nasa-gif {
+/*#nasa-gif {
 	height: 25em;
 	width: 30em; 
 	display: block;
+}*/
+
+.graphtext {
+	background-color: #85a18f; 
+	padding: 50px; 
+	text-align: center; 
 }
 
 p {
@@ -111,6 +119,13 @@ canvas {
 	width: 20em;
 	height: 20em;
 	margin: 1em; 
+	z-index: 1; 
+}
+
+
+#graphs {
+	margin-right: 10em;
+	margin-left: 10em;
 }
 
 
@@ -128,7 +143,17 @@ canvas {
 	margin: 1em; 
 }
 
+
 /*50 STATES*/
+
+#us-states-text {
+	text-align: center; 
+	padding: 5em;
+}
+
+#us-states {
+	background-color: #85a18f; 
+}
 
 .text {
 	color: #fff;
@@ -139,17 +164,18 @@ h1 {
 }
 
 img {
-	height: 10em;
-	width: 10em;
+	height: 5em;
+	width: 5em;
 	margin: 1em;
-	display: inline;
 }
 
 .img-container {
 	float:left;
-	background-color: #fff; 
-	margin: 1em;
+	/*background-color: #fff; 
+	margin: 1em;*/
+	background-color: #85a18f; 
 	text-align: center; 
+	width: 100%;
 }
 
 .attribution {

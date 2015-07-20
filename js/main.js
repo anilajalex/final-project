@@ -4,6 +4,8 @@ $(document).ready(function(){
 
 //STYLE ELEMENTS
 
+// var s = skrollr.init();
+
 
 $('#scroll-button').mouseover(function(){
 	$('#scroll-button').animate({

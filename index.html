@@ -10,7 +10,7 @@
 
 <div class="video">
 	<video id="welcomevid" control="false" autoplay="true" loop="true" muted="true">
-		<source src="images/final_project_vid.mp4" type="video/mp4" width="500" height="500">
+		<source src="images/final_trees.mp4" type="video/mp4" width="500" height="500">
 	</video>
 
 	<div class="video-text">
@@ -28,18 +28,25 @@
 		<h1>SOME SHIT ABOUT CLIMATE CHANGE</h1>
 		<p>So much text about climate change So much text about climate change So much text about climate change So much text about climate change So much text about climate change</p>
 
-		<div id="greenhouse-gas-graph">
-			<p id="greenhouse-gas-text"> Information about the top 10 greenhouse gas emitters </p>
-			<canvas id="greenhouse-gas" width="150" height="150">
-			</canvas>
+		<div id="graphs">
+			<div id="greenhouse-gas-graph">
+				<p id="greenhouse-gas-text"> Information about the top 10 greenhouse gas emitters Information about the top 10 greenhouse gas emitters Information about the top 10 greenhouse gas emitters</p>
+				<canvas id="greenhouse-gas" width="150" height="150">
+				</canvas>
+			</div>
+
+			<div id="usa-future-graph">
+				<p id="usa-future-text">Mean project temperature for U.S. from 2080 to 2099 in Celsius Mean project temperature for U.S. from 2080 to 2099 in Celsius Mean project temperature for U.S. from 2080 to 2099 in Celsius</p>
+				<canvas id="usa-future" width="400" height="400">
+				</canvas>
+			</div>
 		</div>
 
-		<div id="usa-future-graph">
-			<p id="usa-future-text">Mean project temperature for U.S. from 2080 to 2099 in Celsius</p>
-			<canvas id="usa-future" width="400" height="400">
-			</canvas>
-		</div>
+		<div class="arrow-down"></div>
+	</div>
 
+	<div id="world-map-text">
+		<h1 id="wm-text">A look at the relationship between high income countries and climate change</h1>
 	</div>
 		
 	<div id="world-map-div">
@@ -115,6 +122,10 @@
 				<p>{{income}}</p>
 		</div>
 	</script>
+
+	<div id="us-states-text">
+		<h1>Let's bring it closer to home</h1>
+	</div>
 
 	<div id="us-states">
 		<div class="img-container">
@@ -398,7 +409,8 @@
 	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.0/mustache.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
-	<script type="text/javascript" src="skrollr.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="responsiveslides.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.js"></script>
 
 	<script type="text/javascript" src="js/main.js"></script>
