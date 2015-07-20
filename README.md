@@ -17,6 +17,6 @@ A list of technologies used is here:
 - Chart.Js
 - Mustache.js
 
-Here is my wireframe: 
+
 
 
