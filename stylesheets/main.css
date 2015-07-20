@@ -170,6 +170,7 @@ canvas {
 	float: left;
 	margin: 1em; 
 	font-family: 'Raleway';
+	font-size: 1em; 
 }
 
 #co2-emissions-text {
@@ -178,6 +179,7 @@ canvas {
 	float: right;
 	margin: 1em; 
 	font-family: 'Raleway';
+	font-size: 1em; 
 }
 
 
