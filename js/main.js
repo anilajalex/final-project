@@ -2,9 +2,6 @@ $(document).ready(function(){
 
 //STYLE ELEMENTS
 
- var s = skrollr.init();
-
-
 $('#scroll-button').mouseover(function(){
 	$('#scroll-button').animate({
 		'marginLeft' : "+=30px"
@@ -287,32 +284,6 @@ var options = {
 
 var myLineChart = new Chart(ctx).Line(data, options); 
 
-
-// //Mean project temperature for U.S. from 2080 to 2099 in C CHART
-
-// var data = {
-// 	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
-// 	datasets: [
-// 		{
-// 			label: "CO2 emissions", 
-// 			fillColor: "rgba(220,220,220,0.2)",
-// 	    strokeColor: "rgba(220,220,220,1)",
-// 	    pointColor: "rgba(220,220,220,1)",
-// 	    pointStrokeColor: "#fff",
-// 	    pointHighlightFill: "#fff",
-// 	    pointHighlightStroke: "rgba(220,220,220,1)",
-// 	    data: ['-3.89', '-2.86', 1.13, 7.04, 12.78, 18.14, 21.01, 20.07, 15.81, 9.41, 2.45, '-1.94' ]
-// 		}
-// 	]// ends datasets 
-
-// } // ends data
-
-// var options = {
-// 	scaleShowGridLines : false
-// }
-
-// var ctx = document.getElementById("usa-future").getContext("2d");
-// var secondLineChart = new Chart(ctx).Line(data, options); 
 
 //Top 10 global emissions CHART
 

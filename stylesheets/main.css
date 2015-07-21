@@ -1,226 +1,231 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 
-html, body {
-	height: 100%;
-	position: relative;
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* ============================================================
+  SECTIONS
+============================================================ */
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+section.module p {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+  text-align: center;
+}
+section.module.content {
+  padding: 40px 0;
+  background-color: #b5c6bb; 
+}
+section.module.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.module.parallax-1 {
+  background-image: url("../images/final_trees.gif");
+  background-image: url("../images/final_trees.gif");
+  background-image: url("../images/final_trees.gif");
+  background-image: url("../images/final_trees.gif");
+}
+section.module.parallax-2 {
+  background-image: url("../images/nasa_temp_chart.gif");
+}
+section.module.parallax-3 {
+  background-image: url("../images/perpetual_ocean.gif");
+}
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+    text-align: center;
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
 }
 
 body {
-	background-color: #3e4f44; 
+  background-color: #b5c6bb
 }
 
-/*INTRO*/
-
-video {
-	width: 100%;
-	margin: 0 auto;
-	position: relative;
-}
-
-#welcomevid {
-	position: relative;
-	width: 100%;
-	height: auto;
-	padding: 0;
-
-}
-
+/*VIDEO*/
 .video-text {
-	position: absolute;
-	top: 40%;
-	transform: translateY(-50%);
-	width: 100%;
-	margin: 0;
-	text-align: center;
-	color: white;
-	text-shadow: 0 0 30px #000;
-	font-size: 40px;
-	font-family: 'Raleway'; 
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 30px #000;
+  font-size: 40px;
+  font-family: 'Raleway'; 
 }
 
 .video-text h1 {
-	font-size: 1.3em;
+  font-size: 1.3em;
+  text-align: center;
 }
 
 .video-text span {
-	color: #33C3F0;
+  color: #33C3F0;
+  text-align: center;
 }
 
-#scroll-button {
-	transform: rotate(90deg);
-	display: inline-block;
-	text-decoration: none;
-	transition: all 0.7s;
-	color: #fff;
-	height: 5px; 
-	width: 5px; 
+/*CHARTS*/
+
+#leaf {
+  margin: 1em;
+  margin-top: 1em; 
 }
 
-#scroll-button:hover {
-	text-shadow: 0 0 20px rgba(89, 116, 99, 0.9);
-	color: #85a18f;
+.graphtext {
+  background-color: #b5c6bb; 
+  padding: 20px; 
+  text-align: center; 
+  font-family: 'Raleway';
+}
+
+p {
+  color: #fff;
+}
+
+h2 {
+  color: #fff;
+}
+
+canvas {
+  width: 20em;
+  height: 20em;
+  margin: 1em; 
+  z-index: 1; 
 }
 
 
-/*#container {
-	margin-left: 10em; 
-	margin-right: 10em; 
+/*#graphs {
+  margin-right: 10em;
+  margin-left: 10em;
 }*/
 
-footer {
-	position: absolute;
-	bottom: 0;
-	left: 0; 
-	width: 100%;
-/*	height: 3.4em;
-	margin-top: 1em;*/
-	background-color: #eee; 
 
+#greenhouse-gas-text {
+  width: 20em;
+  height: 20em;
+  float: left;
+  margin: 1em; 
+  font-family: 'Raleway';
+  font-size: 1em; 
+  text-align: center; 
+}
 
+#co2-emissions-text {
+  width: 20em;
+  height: 20em;
+  float: right;
+  margin: 1em; 
+  font-family: 'Raleway';
+  font-size: 1em; 
+  text-align: center; 
 }
 
 /*WORLD MAP*/
 
+#world-map-section {
+  background-color: #00B8E6; 
+}
+
 #world-map-text {
-	margin: 6em; 
-	text-align: center; 
-	font-family: 'Raleway';
+  margin: 6em; 
+  text-align: center; 
+  font-family: 'Raleway';
 }
 
 #world-map-div {
-	background-color: #00B8E6; 
-/*	background-image: url("http://www.netanimations.net/water_waves_ocean_ripple_high_quality_animated_gif.gif"); 
-	background-size: cover;*/
-	margin: 1em; 
-	text-align: center; 
+  margin: 1em; 
+  text-align: center; 
 }
 
 #world-map {
-	margin: 2em;
+  margin: 2em;
 }
-
-/*modal
-/*.md-modal {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	width: 50%;
-	max-width: 630px;
-	min-width: 320px;
-	height: auto;
-	z-index: 2000;
-	visibility: hidden;
-	backface-visibility: hidden;
-	transform: translateX(-50%) translateY(-50%);
-}
-
-.md-show {
-	visibility: visible;
-}
-
-.md-overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	visibility: hidden;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	opacity: 0;
-	background: rgba(143,27,15,0.8);
-	transition: all 0.3s;
-}
-
-.md-show ~ .md-overlay {
-	opacity: 1;
-	visibility: visible;
-}
-*/
-/*CHARTS*/									
-
-
-.graphtext {
-	background-color: #85a18f; 
-	padding: 50px; 
-	text-align: center; 
-	font-family: 'Raleway';
-}
-
-p {
-	color: #fff;
-}
-
-canvas {
-	width: 20em;
-	height: 20em;
-	margin: 1em; 
-	z-index: 1; 
-}
-
-
-#graphs {
-	margin-right: 10em;
-	margin-left: 10em;
-}
-
-
-#greenhouse-gas-text {
-	width: 20em;
-	height: 20em;
-	float: left;
-	margin: 1em; 
-	font-family: 'Raleway';
-	font-size: 1em; 
-}
-
-#co2-emissions-text {
-	width: 20em;
-	height: 20em;
-	float: right;
-	margin: 1em; 
-	font-family: 'Raleway';
-	font-size: 1em; 
-}
-
 
 /*50 STATES*/
 
+#us-states-container {
+  background-color: #b5c6bb; 
+}
+
 #us-states-text {
-	text-align: center; 
-	padding: 5em;
-	font-family: 'Raleway';
+  text-align: center; 
+  padding: 5em;
+  font-family: 'Raleway';
 }
 
 #us-states {
-	background-color: #85a18f; 
-	height: auto;
-	width: 100%;
+  background-color: #b5c6bb; 
+  height: auto;
+  width: 100%;
 }
 
 .text {
-	color: #fff;
-	font-family: 'Raleway';
+  color: #fff;
+  font-family: 'Raleway';
 }
 
 h1 {
-	color: #fff;
+  color: #fff;
 }
 
 img {
-	height: 5em;
-	width: 5em;
-	margin: 3em;
+  height: 5em;
+  width: 5em;
+  margin: 3em;
 }
 
 .img-container {
-	float:left;
-	/*background-color: #fff; 
-	margin: 1em;*/
-	background-color: #85a18f; 
-	text-align: center; 
+  float:left;
+  /*background-color: #fff; 
+  margin: 1em;*/
+  background-color: #b5c6bb; 
+  text-align: center; 
 }
 
 .attribution {
-	position: absolute;
-	bottom: 0;
+  position: absolute;
+  bottom: 0;
 }
