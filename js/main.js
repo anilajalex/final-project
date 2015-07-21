@@ -9,8 +9,8 @@ $('#scroll-button').mouseover(function(){
 }); 
 
 
-$(".video-text").hide(); 
-$(".video-text").show(); 
+// $(".video-text").hide(); 
+// $(".video-text").show(); 
 $('#vid-text1').slideUp( 600 ).delay( 1200 ).fadeIn( 500 );
 $('#vid-text2').slideUp( 900 ).delay( 1500 ).fadeIn( 800 );
 $('#vid-text3').slideUp( 1200 ).delay( 1800 ).fadeIn( 1200 ); 
@@ -20,13 +20,16 @@ $('#vid-text3').slideUp( 1200 ).delay( 1800 ).fadeIn( 1200 );
 
 //CANADA
 
-$("#world-map").contents().find("#CA").click( function(e){ 
+$("#world-map").contents().find("#CA").click( function(){ 
 	var requestCanada = $.ajax({
 		url: 'http://api.worldbank.org/countries', 
 		type: 'GET', 
-		data: {  
-			per_page: 300,  
-			format: 'JSON'
+		data: {
+				type: 'annualavg', 
+				start: 2012, 
+				end: 2013, 
+        per_page: 300, 
+        format: 'JSON'
 		}
 	}); 
 	requestCanada.done(function(response){
@@ -1548,6 +1551,9 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 		var output = Mustache.render(template, { min: data.results[11].value, max: data.results[13].value}); 
 		$("#results").html(output); 
 	}
+
+	//modal for us states
+	
 
 }) // doc.ready
 

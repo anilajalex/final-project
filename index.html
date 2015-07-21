@@ -12,9 +12,9 @@
     <section class="module parallax parallax-1">
       <div class="container">
         <div class="video-text">
-            <p id="vid-text1">A look at climate change</p>
-            <p id="vid-text2">what was, what is</p>
-            <p id="vid-text3">and what's to come</p>
+            <h2 id="vid-text1">A look at climate change</h2>
+            <h2 id="vid-text2">what was, what is</h2>
+            <h2 id="vid-text3">and what's to come</h2>
         </div>
       </div>
     </section>
@@ -46,10 +46,11 @@
       </div>
     </section>
 
-   <!--  NASA GIF -->
+   <!--  OCEAN GIF -->
 
     <section class="module parallax parallax-2">
       <div class="container">
+        <h1>Ocean currents</h1>
       </div>
     </section>
 
@@ -63,7 +64,7 @@
         </div>
         
     <div id="world-map-div">
-        <object id="world-map" data="./images/world_map.svg" type="image/svg+xml" width="1000" height="750"></object>
+        <object id="world-map" data="./images/worldHigh_2.svg" type="image/svg+xml" width="1000" height="750"></object>
     </div>
  
     <!-- <div class="md-modal md-effect-1" id="modal-1"> -->
@@ -141,7 +142,7 @@
       </div>
     </section>
 
-  <!--   PERPETUAL OCEAN GIF -->
+  <!--   NASA GIF -->
     <section class="module parallax parallax-3">
       <div class="container">
       </div>
@@ -405,22 +406,24 @@
             <img id="wyoming" src="images/wyoming.png">
         </div>
 
-        <div id="results"></div>
+        <!-- <div id="results"></div> -->
     </div>
     </section>
 
-    <script id="noaa-template"type="x-tmpl-mustache">
-        <div>
-                
-                <p>The extreme minimum temperature reported in a month is {{min}} degrees Fahrenheit</p>
-                <p>The extreme maximum temperature reported in a month is {{max}} degrees Fahrenheit</p>
+    <!-- US STATES MODAL -->
 
+    
+    <div id="results"></div>
+    
+    
+    <script id="noaa-template"type="x-tmpl-mustache">
+         <div>
+                    
+            <p>The extreme minimum temperature reported in a month is {{min}} degrees Fahrenheit</p>
+            <p>The extreme maximum temperature reported in a month is {{max}} degrees Fahrenheit</p>
         </div>
 
     </script>
-      
-    
-
 
 
 	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>

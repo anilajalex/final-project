@@ -53,11 +53,11 @@ section.module.parallax-1 {
 }
 
 section.module.parallax-2 {
-  background-image: url("../images/nasa_temp_chart.gif");
+  background-image: url("../images/perpetual_ocean.gif");
 }
 
 section.module.parallax-3 {
-  background-image: url("../images/perpetual_ocean.gif");
+  background-image: url("../images/nasa_temp_chart.gif");
 }
 
 /*@media all and (min-width: 600px) {
@@ -229,4 +229,17 @@ img {
   position: absolute;
   bottom: 0;
 }
+
+/*Modal for 50 states */
+
+
+
+
+
+
+
+
+
+
+
 
