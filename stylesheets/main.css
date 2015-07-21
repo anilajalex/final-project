@@ -15,7 +15,7 @@ section.module:last-child {
 }
 section.module h2 {
   margin-bottom: 40px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Raleway", serif;
   font-size: 30px;
 }
 section.module p {
@@ -33,9 +33,9 @@ section.module.content {
   background-color: #b5c6bb; 
 }
 section.module.parallax {
-  height: 600px;
+  height: 800px;
   background-position: 50% 50%;
-  background-repeat: no-repeat;
+  background-repeat: repeat repeat;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -50,18 +50,17 @@ section.module.parallax h1 {
 }
 section.module.parallax-1 {
   background-image: url("../images/final_trees.gif");
-  background-image: url("../images/final_trees.gif");
-  background-image: url("../images/final_trees.gif");
-  background-image: url("../images/final_trees.gif");
 }
+
 section.module.parallax-2 {
   background-image: url("../images/nasa_temp_chart.gif");
 }
+
 section.module.parallax-3 {
   background-image: url("../images/perpetual_ocean.gif");
 }
 
-@media all and (min-width: 600px) {
+/*@media all and (min-width: 600px) {
   section.module h2 {
     font-size: 42px;
   }
@@ -77,7 +76,7 @@ section.module.parallax-3 {
   section.module.parallax h1 {
     font-size: 160px;
   }
-}
+}*/
 
 body {
   background-color: #b5c6bb
@@ -223,9 +222,11 @@ img {
   margin: 1em;*/
   background-color: #b5c6bb; 
   text-align: center; 
+  cursor: crosshair; 
 }
 
 .attribution {
   position: absolute;
   bottom: 0;
 }
+
