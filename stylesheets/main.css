@@ -136,12 +136,6 @@ canvas {
 }
 
 
-/*#graphs {
-  margin-right: 10em;
-  margin-left: 10em;
-}*/
-
-
 #greenhouse-gas-text {
   width: 20em;
   height: 20em;
@@ -176,11 +170,11 @@ canvas {
 
 #world-map-div {
   margin: 1em; 
-  text-align: center; 
+  text-align: center;  
 }
 
 #world-map {
-  margin: 2em;
+ /* margin: 2em;*/
 }
 
 /*50 STATES*/

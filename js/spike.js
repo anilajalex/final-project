@@ -1,3 +1,66 @@
+HOw I was displaying world map data
+ <script id="world-map-template"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+        <script id="world-map-template2"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+        <script id="world-map-template3"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+        <script id="world-map-template4"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+        <script id="world-map-template5"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+        <script id="world-map-template6"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+        <script id="world-map-template7"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+        <script id="world-map-template8"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+        <script id="world-map-template9"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+        <script id="world-map-template10"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
+
+
+
 MODAL: 
 
 HTML: 

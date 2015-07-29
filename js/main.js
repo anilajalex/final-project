@@ -2,6 +2,10 @@ $(document).ready(function(){
 
 //STYLE ELEMENTS
 
+// $('#leaf').each(function(){
+// 	$(this).parallax("50%", 0.6); 
+// }); 
+
 $('#scroll-button').mouseover(function(){
 	$('#scroll-button').animate({
 		'marginLeft' : "+=30px"
