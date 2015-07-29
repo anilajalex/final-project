@@ -5,425 +5,431 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Timber</title>
 	<link rel="stylesheet" href="stylesheets/main.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-</body>
 </head>
 <body>
-
-<div class="video">
-	<video id="welcomevid" control="false" autoplay="true" loop="true" muted="true">
-		<source src="images/final_trees.mp4" type="video/mp4" width="500" height="500">
-	</video>
-
-	<div class="video-text">
-		<p id="vid-text1">A look at climate change</p>
-		<p id="vid-text2">what was, what is</p>
-		<p id="vid-text3">and what's to come</p>
-		<a id="scroll-button" href=".graphtext">&#10095;</a>
-	</div>
-</div> 
-
-<div id="container"> 
-	<div class="graphtext">
-
-		<h3 class="text">CIMATE CHANGE</h3>
-		<h1>WHAT IS AND WHAT'S TO COME</h1>
-		<p>Evidence for climatic change is taken from a variety of sources that can be used to reconstruct past climates.</p>
-
-		<div id="graphs">
-			<div id="greenhouse-gas-graph">
-				<p id="greenhouse-gas-text"> Seventy-two percent of greenhouse gas emissions come from ten countries China, US, EU 28, India, Russia, Japan, Brazil, Indonesia, Mexico and Iran. </p>
-				<canvas id="greenhouse-gas" width="150" height="150">
-				</canvas>
-			</div>
-
-			<div id="co2-emissions-graph">
-				<p id="co2-emissions-text">United States CO2 emissions (measured in metric tons) from 2005 to 2011. </p>
-				<canvas id="co2-emissions" width="400" height="400">
-				</canvas>
-			</div>
-		</div>
-
-		<div class="arrow-down"></div>
-	</div>
-
-	<div id="world-map-text">
-		<h1 id="wm-text">A look at the relationship between high income countries and climate change</h1>
-	</div>
-		
-	<div id="world-map-div">
-		<object id="world-map" data="./images/world_map.svg" type="image/svg+xml" width="1000" height="750"></object>
-		<!-- <div id="canada-data"></div>
-		<div id="us-data"></div>
-		<div id="br-data"></div>
-		<div id="ru-data"></div>
-		<div id="cn-data"></div>
-		<div id="in-data"></div>
-		<div id="id-data"></div>
-		<div id="ir-data"></div>
-		<div id="za-data"></div> -->
-	</div>
- 
-	<!-- <div class="md-modal md-effect-1" id="modal-1"> -->
-		<div id="canada-data"></div>
-		<div id="us-data"></div>
-		<div id="br-data"></div>
-		<div id="ru-data"></div>
-		<div id="cn-data"></div>
-		<div id="in-data"></div>
-		<div id="id-data"></div>
-		<div id="ir-data"></div>
-		<div id="za-data"></div>
-	<!-- </div -->
-
-		<script id="world-map-template"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
-		<script id="world-map-template2"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
-		<script id="world-map-template3"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
-		<script id="world-map-template4"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
-		<script id="world-map-template5"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
-		<script id="world-map-template6"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
-		<script id="world-map-template7"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
-		<script id="world-map-template8"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
-		<script id="world-map-template9"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
-		<script id="world-map-template10"type="x-tmpl-mustache">
-			<div>
-					<p>{{income}}</p>
-			</div>
-		</script>
-
 	
+ <!--    VIDEO -->
+    <section class="module parallax parallax-1">
+      <div class="container">
+        <div class="video-text">
+            <h2 id="vid-text1">A look at climate change</h2>
+            <h2 id="vid-text2">what was, what is</h2>
+            <h2 id="vid-text3">and what's to come</h2>
+        </div>
+      </div>
+    </section>
 
-	<div id="us-states-text">
-		<h1>A look at the minimum and maximum average temperatures in all 50 states from 2009 to 2010</h1>
-	</div>
+<!--     CHARTS -->
 
-	<div id="us-states">
-		<div class="img-container">
-			<h3>ALABAMA</h3>
-			<img id="alabama" src="images/alabama.png">
-		</div>
+    <section class="module content">
+      <div class="container">
+        <div class="graphtext">
+            <img id="leaf" src="images/leaf.png">
+            <h3 class="text">CIMATE CHANGE</h3>
+            <h1>WHAT IS AND WHAT'S TO COME</h1>
+            <p>Evidence for climatic change is taken from a variety of sources that can be used to reconstruct past climates.</p>
 
-		<div class="img-container">
-			<h3>ALASKA</h3>
-			<img id="alaska" src="images/alaska.png">
-		</div>
+        <div id="graphs">
+            <div id="greenhouse-gas-graph">
+                <p id="greenhouse-gas-text"> Seventy-two percent of greenhouse gas emissions come from ten countries China, US, EU 28, India, Russia, Japan, Brazil, Indonesia, Mexico and Iran. </p>
+                <canvas id="greenhouse-gas" width="150" height="150">
+                </canvas>
+            </div>
 
-		<div class="img-container">
-			<h3>ARIZONA</h3>
-			<img id="arizona" src="images/arizona.png">
-		</div>
+            <div id="co2-emissions-graph">
+                <p id="co2-emissions-text">United States CO2 emissions (measured in metric tons) from 2005 to 2011. </p>
+                <canvas id="co2-emissions" width="400" height="400">
+                </canvas>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
 
-		<div class="img-container">
-			<h3>ARKANSAS</h3>
-			<img id="arkansas" src="images/arkansas.png">
-		</div>
+   <!--  OCEAN GIF -->
 
-		<div class="img-container">
-			<h3>CALIFORNIA</h3>
-			<img id="california" src="images/california.png">
-		</div>
+    <section class="module parallax parallax-2">
+      <div class="container">
+        <h1>Ocean currents</h1>
+      </div>
+    </section>
 
-		<div class="img-container">
-			<h3>COLORADO</h3>
-			<img id="colorado" src="images/colorado.png">
-		</div>
+   <!--  WORLD MAP -->
 
-		<div class="img-container">
-			<h3>CONNECTICUT</h3>
-			<img id="connecticut" src="images/conneticut.png">
-		</div>
+    <section class="module content" id="world-map-section">
+      <div class="container">
+        <div id="world-map-text">
+            <img id="leaf" src="images/leaf.png">
+            <h1 id="wm-text">A look at the relationship between high income countries and climate change</h1>
+        </div>
+        
+    <div id="world-map-div">
+        <object id="world-map" data="./images/worldHigh_2.svg" type="image/svg+xml" width="1020" height="750"></object>
+    </div>
+ 
+    <!-- <div class="md-modal md-effect-1" id="modal-1"> -->
+        <div id="canada-data"></div>
+        <div id="us-data"></div>
+        <div id="br-data"></div>
+        <div id="ru-data"></div>
+        <div id="cn-data"></div>
+        <div id="in-data"></div>
+        <div id="id-data"></div>
+        <div id="ir-data"></div>
+        <div id="za-data"></div>
+    <!-- </div -->
 
-		<div class="img-container">
-			<h3>DELAWARE</h3>
-			<img id="delaware" src="images/delaware.png">
-		</div>
+        <script id="world-map-template"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>FLORIDA</h3>
-			<img id="florida" src="images/florida.png">
-		</div>
+        <script id="world-map-template2"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>GEORGIA</h3>
-			<img id="georgia" src="images/georgia.png">
-		</div>
+        <script id="world-map-template3"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>HAWAII</h3>
-			<img id="hawaii" src="images/hawaii.png">
-		</div>
+        <script id="world-map-template4"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>IDAHO</h3>
-			<img id="idaho" src="images/idaho.png">
-		</div>
+        <script id="world-map-template5"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>ILLINOIS</h3>
-			<img id="illinois" src="images/illinois.png">
-		</div>
+        <script id="world-map-template6"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>INDIANA</h3>
-			<img id="indiana" src="images/indiana.png">
-		</div>
+        <script id="world-map-template7"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>IOWA</h3>
-			<img id="iowa" src="images/iowa.png">
-		</div>
+        <script id="world-map-template8"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>KANSAS</h3>
-			<img id="kansas" src="images/kansas.png">
-		</div>
+        <script id="world-map-template9"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>KENTUCKY</h3>
-			<img id="kentucky" src="images/kentucky.png">
-		</div>
+        <script id="world-map-template10"type="x-tmpl-mustache">
+            <div>
+                    <p>{{income}}</p>
+            </div>
+        </script>
 
-		<div class="img-container">
-			<h3>LOUISIANA</h3>
-			<img id="louisiana" src="images/louisiana.png">
-		</div>
+      </div>
+    </section>
 
-		<div class="img-container">
-			<h3>MAINE</h3>
-			<img id="maine" src="images/maine.png">
-		</div>
+  <!--   NASA GIF -->
+    <section class="module parallax parallax-3">
+      <div class="container">
+      </div>
+    </section>
 
-		<div class="img-container">
-			<h3>MARYLAND</h3>
-			<img id="maryland" src="images/maryland.png">
-		</div>
+    <!-- US STATES -->
+    <section class="module content" id="us-states-container">
+        <div id="us-states-text">
+            <img id="leaf" src="images/leaf.png">
+            <h1>A look at the minimum and maximum average temperatures in all 50 states from 2009 to 2010</h1>
+        </div>
 
-		<div class="img-container">
-			<h3>MASSACHUSETTES</h3>
-			<img id="massachusettes" src="images/massachusettes.png">
-		</div>
+    <div id="us-states">
+        <div class="img-container">
+            <h3>ALABAMA</h3>
+            <img id="alabama" src="images/alabama.png">
+        </div>
 
-		<div class="img-container">
-			<h3>MICHIGAN</h3>
-			<img id="michigan" src="images/michigan.png">
-		</div>
+        <div class="img-container">
+            <h3>ALASKA</h3>
+            <img id="alaska" src="images/alaska.png">
+        </div>
 
-		<div class="img-container">
-			<h3>MINNESOTA</h3>
-			<img id="minnesota" src="images/minnesota.png">
-		</div>
+        <div class="img-container">
+            <h3>ARIZONA</h3>
+            <img id="arizona" src="images/arizona.png">
+        </div>
 
-		<div class="img-container">
-			<h3>MISSISSIPPI</h3>
-			<img id="mississippi" src="images/mississippi.png">
-		</div>
+        <div class="img-container">
+            <h3>ARKANSAS</h3>
+            <img id="arkansas" src="images/arkansas.png">
+        </div>
 
-		<div class="img-container">
-			<h3>MISSOURI</h3>
-			<img id="missouri" src="images/missouri.png">
-		</div>
+        <div class="img-container">
+            <h3>CALIFORNIA</h3>
+            <img id="california" src="images/california.png">
+        </div>
 
-		<div class="img-container">
-			<h3>MONTANA</h3>
-			<img id="montana" src="images/montana.png">
-		</div>
+        <div class="img-container">
+            <h3>COLORADO</h3>
+            <img id="colorado" src="images/colorado.png">
+        </div>
 
-		<div class="img-container">
-			<h3>NEBRASKA</h3>
-			<img id="nebraska" src="images/nebraska.png">
-		</div>
+        <div class="img-container">
+            <h3>CONNECTICUT</h3>
+            <img id="connecticut" src="images/conneticut.png">
+        </div>
 
-		<div class="img-container">
-			<h3>NEVADA</h3>
-			<img id="nevada" src="images/nevada.png">
-		</div>
+        <div class="img-container">
+            <h3>DELAWARE</h3>
+            <img id="delaware" src="images/delaware.png">
+        </div>
 
-		<div class="img-container">
-			<h3>NEW HAMPSHIRE</h3>
-			<img id="new-hampshire" src="images/new-hampshire.png">
-		</div>
+        <div class="img-container">
+            <h3>FLORIDA</h3>
+            <img id="florida" src="images/florida.png">
+        </div>
 
-		<div class="img-container">
-			<h3>NEW JERSEY</h3>
-			<img id="new-jersey" src="images/new-jersey.png">
-		</div>
+        <div class="img-container">
+            <h3>GEORGIA</h3>
+            <img id="georgia" src="images/georgia.png">
+        </div>
 
-		<div class="img-container">
-			<h3>NEW MEXICO</h3>
-			<img id="new-mexico" src="images/new-mexico.png">
-		</div>
+        <div class="img-container">
+            <h3>HAWAII</h3>
+            <img id="hawaii" src="images/hawaii.png">
+        </div>
 
-		<div class="img-container">
-			<h3>NEW YORK</h3>
-			<img id="new-york" src="images/new-york.png">
-		</div>
+        <div class="img-container">
+            <h3>IDAHO</h3>
+            <img id="idaho" src="images/idaho.png">
+        </div>
 
-		<div class="img-container">
-			<h3>NORTH CAROLINA</h3>
-			<img id="north-carolina" src="images/north-carolina.png">
-		</div>
+        <div class="img-container">
+            <h3>ILLINOIS</h3>
+            <img id="illinois" src="images/illinois.png">
+        </div>
 
-		<div class="img-container">
-			<h3>NORTH DAKOTA</h3>
-			<img id="north-dakota" src="images/north-dakota.png">
-		</div>
+        <div class="img-container">
+            <h3>INDIANA</h3>
+            <img id="indiana" src="images/indiana.png">
+        </div>
 
-		<div class="img-container">
-			<h3>OHIO</h3>
-			<img id="ohio" src="images/ohio.png">
-		</div>
+        <div class="img-container">
+            <h3>IOWA</h3>
+            <img id="iowa" src="images/iowa.png">
+        </div>
 
-		<div class="img-container">
-			<h3>OKLAHOMA</h3>
-			<img id="oklahoma" src="images/oklahoma.png">
-		</div>
+        <div class="img-container">
+            <h3>KANSAS</h3>
+            <img id="kansas" src="images/kansas.png">
+        </div>
 
-		<div class="img-container">
-			<h3>OREGON</h3>
-			<img id="oregon" src="images/oregon.png">
-		</div>
+        <div class="img-container">
+            <h3>KENTUCKY</h3>
+            <img id="kentucky" src="images/kentucky.png">
+        </div>
 
-		<div class="img-container">
-			<h3>PENNSYLVANIA</h3>
-			<img id="pennsylvania" src="images/pennsylvania.png">
-		</div>
+        <div class="img-container">
+            <h3>LOUISIANA</h3>
+            <img id="louisiana" src="images/louisiana.png">
+        </div>
 
-		<div class="img-container">
-			<h3>RHODE ISLAND</h3>
-			<img id="rhode-island" src="images/rhode-island.png">
-		</div>
+        <div class="img-container">
+            <h3>MAINE</h3>
+            <img id="maine" src="images/maine.png">
+        </div>
 
-		<div class="img-container">
-			<h3>SOUTH CAROLINA</h3>
-			<img id="south-carolina" src="images/south-carolina.png">
-		</div>
+        <div class="img-container">
+            <h3>MARYLAND</h3>
+            <img id="maryland" src="images/maryland.png">
+        </div>
 
-		<div class="img-container">
-			<h3>SOUTH DAKOTA</h3>
-			<img id="south-dakota" src="images/south-dakota.png">
-		</div>
+        <div class="img-container">
+            <h3>MASSACHUSETTES</h3>
+            <img id="massachusettes" src="images/massachusettes.png">
+        </div>
 
-		<div class="img-container">
-			<h3>TENNESSEE</h3>
-			<img id="tennessee" src="images/tennessee.png">
-		</div>
+        <div class="img-container">
+            <h3>MICHIGAN</h3>
+            <img id="michigan" src="images/michigan.png">
+        </div>
 
-		<div class="img-container">
-			<h3>TEXAS</h3>
-			<img id="texas" src="images/texas.png">
-		</div>
+        <div class="img-container">
+            <h3>MINNESOTA</h3>
+            <img id="minnesota" src="images/minnesota.png">
+        </div>
 
-		<div class="img-container">
-			<h3>UTAH</h3>
-			<img id="utah" src="images/utah.png">
-		</div>
+        <div class="img-container">
+            <h3>MISSISSIPPI</h3>
+            <img id="mississippi" src="images/mississippi.png">
+        </div>
 
-		<div class="img-container">
-			<h3>VERMONT</h3>
-			<img id="vermont" src="images/vermont.png">
-		</div>
+        <div class="img-container">
+            <h3>MISSOURI</h3>
+            <img id="missouri" src="images/missouri.png">
+        </div>
 
-		<div class="img-container">
-			<h3>VIRGINIA</h3>
-			<img id="virginia" src="images/virginia.png">
-		</div>
+        <div class="img-container">
+            <h3>MONTANA</h3>
+            <img id="montana" src="images/montana.png">
+        </div>
 
-		<div class="img-container">
-			<h3>WASHINGTON</h3>
-			<img id="washington" src="images/washington.png">
-		</div>
+        <div class="img-container">
+            <h3>NEBRASKA</h3>
+            <img id="nebraska" src="images/nebraska.png">
+        </div>
 
-		<div class="img-container">
-			<h3>WEST VIRGINIA</h3>
-			<img id="west-virginia" src="images/west-virginia.png">
-		</div>
+        <div class="img-container">
+            <h3>NEVADA</h3>
+            <img id="nevada" src="images/nevada.png">
+        </div>
 
-		<div class="img-container">
-			<h3>WISCONSIN</h3>
-			<img id="wisconsin" src="images/wisconsin.png">
-		</div>
+        <div class="img-container">
+            <h3>NEW HAMPSHIRE</h3>
+            <img id="new-hampshire" src="images/new-hampshire.png">
+        </div>
 
-		<div class="img-container">
-			<h3>WYOMING</h3>
-			<img id="wyoming" src="images/wyoming.png">
-		</div>
+        <div class="img-container">
+            <h3>NEW JERSEY</h3>
+            <img id="new-jersey" src="images/new-jersey.png">
+        </div>
 
-		<div id="results"></div>
-	</div>
+        <div class="img-container">
+            <h3>NEW MEXICO</h3>
+            <img id="new-mexico" src="images/new-mexico.png">
+        </div>
 
-	<script id="noaa-template"type="x-tmpl-mustache">
-		<div>
-				
-					<p>The extreme minimum temperature reported in a month is {{min}} degrees Fahrenheit</p>
-						
-				
-				
-				<p>The extreme maximum temperature reported in a month is {{max}} degrees Fahrenheit</p>
+        <div class="img-container">
+            <h3>NEW YORK</h3>
+            <img id="new-york" src="images/new-york.png">
+        </div>
 
-		</div>
+        <div class="img-container">
+            <h3>NORTH CAROLINA</h3>
+            <img id="north-carolina" src="images/north-carolina.png">
+        </div>
 
-	</script>
+        <div class="img-container">
+            <h3>NORTH DAKOTA</h3>
+            <img id="north-dakota" src="images/north-dakota.png">
+        </div>
 
-</div>
+        <div class="img-container">
+            <h3>OHIO</h3>
+            <img id="ohio" src="images/ohio.png">
+        </div>
 
-<!-- <footer>
-	<p>Works Cited:</p>
-	<p class="attribution">Illustrations of U.S. states are from <a href="http://www.nuts4boltsdesign.com/#about">Nuts4BoltsDesign</a> via <a href="https://thenounproject.com/nuts4bolts/">The Noun Project</a>.</p> 
-	<p><a href="http://climate.nasa.gov/climate_resources/115/">NASA Climate Resources</a></p>
-	<p><a href="http://www.pewglobal.org/2015/07/14/climate-change-seen-as-top-global-threat/">Pew Research Center</a></p>
-	<p>Video taken from Nasa's <a href="https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=10841">Perpetual Ocean</a></p>
-	<p>Scroll image from <a href="https://thenounproject.com/search/?q=triangle&i=45047">Kervin Markle</a></p>
-</footer> -->
+        <div class="img-container">
+            <h3>OKLAHOMA</h3>
+            <img id="oklahoma" src="images/oklahoma.png">
+        </div>
+
+        <div class="img-container">
+            <h3>OREGON</h3>
+            <img id="oregon" src="images/oregon.png">
+        </div>
+
+        <div class="img-container">
+            <h3>PENNSYLVANIA</h3>
+            <img id="pennsylvania" src="images/pennsylvania.png">
+        </div>
+
+        <div class="img-container">
+            <h3>RHODE ISLAND</h3>
+            <img id="rhode-island" src="images/rhode-island.png">
+        </div>
+
+        <div class="img-container">
+            <h3>SOUTH CAROLINA</h3>
+            <img id="south-carolina" src="images/south-carolina.png">
+        </div>
+
+        <div class="img-container">
+            <h3>SOUTH DAKOTA</h3>
+            <img id="south-dakota" src="images/south-dakota.png">
+        </div>
+
+        <div class="img-container">
+            <h3>TENNESSEE</h3>
+            <img id="tennessee" src="images/tennessee.png">
+        </div>
+
+        <div class="img-container">
+            <h3>TEXAS</h3>
+            <img id="texas" src="images/texas.png">
+        </div>
+
+        <div class="img-container">
+            <h3>UTAH</h3>
+            <img id="utah" src="images/utah.png">
+        </div>
+
+        <div class="img-container">
+            <h3>VERMONT</h3>
+            <img id="vermont" src="images/vermont.png">
+        </div>
+
+        <div class="img-container">
+            <h3>VIRGINIA</h3>
+            <img id="virginia" src="images/virginia.png">
+        </div>
+
+        <div class="img-container">
+            <h3>WASHINGTON</h3>
+            <img id="washington" src="images/washington.png">
+        </div>
+
+        <div class="img-container">
+            <h3>WEST VIRGINIA</h3>
+            <img id="west-virginia" src="images/west-virginia.png">
+        </div>
+
+        <div class="img-container">
+            <h3>WISCONSIN</h3>
+            <img id="wisconsin" src="images/wisconsin.png">
+        </div>
+
+        <div class="img-container">
+            <h3>WYOMING</h3>
+            <img id="wyoming" src="images/wyoming.png">
+        </div>
+
+        <!-- <div id="results"></div> -->
+    </div>
+    </section>
+
+    <!-- US STATES MODAL -->
+
+    
+    <div id="results"></div>
+    
+    
+    <script id="noaa-template"type="x-tmpl-mustache">
+         <div>
+                    
+            <p>The extreme minimum temperature reported in a month is {{min}} degrees Fahrenheit</p>
+            <p>The extreme maximum temperature reported in a month is {{max}} degrees Fahrenheit</p>
+        </div>
+
+    </script>
 
 
 	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.0/mustache.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
 	<script type="text/javascript" src="js/main.js"></script>
 </body>

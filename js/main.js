@@ -1,8 +1,10 @@
-NOAA_TOKEN = ['NOAA_TOKEN']; 
-
 $(document).ready(function(){
 
 //STYLE ELEMENTS
+
+// $('#leaf').each(function(){
+// 	$(this).parallax("50%", 0.6); 
+// }); 
 
 $('#scroll-button').mouseover(function(){
 	$('#scroll-button').animate({
@@ -11,8 +13,8 @@ $('#scroll-button').mouseover(function(){
 }); 
 
 
-$(".video-text").hide(); 
-$(".video-text").show(); 
+// $(".video-text").hide(); 
+// $(".video-text").show(); 
 $('#vid-text1').slideUp( 600 ).delay( 1200 ).fadeIn( 500 );
 $('#vid-text2').slideUp( 900 ).delay( 1500 ).fadeIn( 800 );
 $('#vid-text3').slideUp( 1200 ).delay( 1800 ).fadeIn( 1200 ); 
@@ -22,13 +24,16 @@ $('#vid-text3').slideUp( 1200 ).delay( 1800 ).fadeIn( 1200 );
 
 //CANADA
 
-$("#world-map").contents().find("#CA").click( function(e){ 
+$("#world-map").contents().find("#CA").click( function(){ 
 	var requestCanada = $.ajax({
 		url: 'http://api.worldbank.org/countries', 
 		type: 'GET', 
-		data: {  
-			per_page: 300,  
-			format: 'JSON'
+		data: {
+				type: 'annualavg', 
+				start: 2012, 
+				end: 2013, 
+        per_page: 300, 
+        format: 'JSON'
 		}
 	}); 
 	requestCanada.done(function(response){
@@ -287,32 +292,6 @@ var options = {
 var myLineChart = new Chart(ctx).Line(data, options); 
 
 
-// //Mean project temperature for U.S. from 2080 to 2099 in C CHART
-
-// var data = {
-// 	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
-// 	datasets: [
-// 		{
-// 			label: "CO2 emissions", 
-// 			fillColor: "rgba(220,220,220,0.2)",
-// 	    strokeColor: "rgba(220,220,220,1)",
-// 	    pointColor: "rgba(220,220,220,1)",
-// 	    pointStrokeColor: "#fff",
-// 	    pointHighlightFill: "#fff",
-// 	    pointHighlightStroke: "rgba(220,220,220,1)",
-// 	    data: ['-3.89', '-2.86', 1.13, 7.04, 12.78, 18.14, 21.01, 20.07, 15.81, 9.41, 2.45, '-1.94' ]
-// 		}
-// 	]// ends datasets 
-
-// } // ends data
-
-// var options = {
-// 	scaleShowGridLines : false
-// }
-
-// var ctx = document.getElementById("usa-future").getContext("2d");
-// var secondLineChart = new Chart(ctx).Line(data, options); 
-
 //Top 10 global emissions CHART
 
 var data = [
@@ -358,7 +337,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -382,7 +361,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -406,7 +385,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -430,7 +409,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -454,7 +433,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -478,7 +457,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -502,7 +481,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -526,7 +505,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -550,7 +529,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -574,7 +553,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -598,7 +577,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -622,7 +601,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -646,7 +625,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -670,7 +649,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -694,7 +673,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -718,7 +697,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -742,7 +721,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -766,7 +745,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -790,7 +769,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -814,7 +793,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -838,7 +817,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -862,7 +841,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -886,7 +865,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -910,7 +889,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -934,7 +913,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -958,7 +937,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -982,7 +961,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1006,7 +985,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1030,7 +1009,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1054,7 +1033,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1078,7 +1057,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1102,7 +1081,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1126,7 +1105,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1150,7 +1129,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1174,7 +1153,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1198,7 +1177,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1222,7 +1201,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1246,7 +1225,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1270,7 +1249,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1294,7 +1273,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1318,7 +1297,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1342,7 +1321,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1366,7 +1345,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1390,7 +1369,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1414,7 +1393,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1438,7 +1417,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1462,7 +1441,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1486,7 +1465,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1510,7 +1489,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1534,7 +1513,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1558,7 +1537,7 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 				includemetadata: 'false'
 			}, 
 			headers: {
-				token: NOAA_TOKEN // put this in an environment variable 
+				token: "iTAUOsOgQNrZuFuqPorfDBUTfOKAScUJ" 
 			}
 		}); 
 		requestNOAA.done(
@@ -1576,6 +1555,9 @@ var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 		var output = Mustache.render(template, { min: data.results[11].value, max: data.results[13].value}); 
 		$("#results").html(output); 
 	}
+
+	//modal for us states
+	
 
 }) // doc.ready
 
